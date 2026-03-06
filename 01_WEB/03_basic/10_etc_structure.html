@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            nav > ul {
+                overflow: hidden;
+            }
+            nav > ul > li {
+                list-style: none;
+                float: left;
+                padding: 15px;
+            }
+            nav > ul > li:nth-child(2n) {
+                background-color: #ff0003;
+            }
+            nav > ul > li:nth-child(2n + 1) {
+                background-color: #800000;
+            }
+            nav > ul > li:first-child {
+                border-radius: 10px 0 0 10px;
+            }
+            /* 좌측 상단 기준 시계방향 */
+            nav > ul > li:last-child {
+                border-radius: 0 10px 10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>첫 번째</li>
+                <li>두 번째</li>
+                <li>세번째</li>
+                <li>네번째</li>
+                <li>다섯 번째</li>
+                <li>여섯번째</li>
+                <li>일곱 번째</li>
+            </ul>
+        </nav>
+    </body>
+</html>
