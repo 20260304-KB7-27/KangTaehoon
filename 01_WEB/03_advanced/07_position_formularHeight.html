@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .parent {
+                border: 1px solid black;
+                width: 370px;
+                height: 100px;
+                box-sizing: border-box;
+                position: relative;
+            }
+            .box {
+                width: 70px;
+                height: 70px;
+                position: absolute;
+            }
+
+            .box:nth-child(1) {
+                background-color: red;
+                left: 10px;
+                top: 10px;
+                z-index: 3;
+            }
+            .box:nth-child(2) {
+                background-color: green;
+                left: 40px;
+                top: 40px;
+                z-index: 2;
+            }
+            .box:nth-child(3) {
+                background-color: blue;
+                left: 70px;
+                top: 70px;
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lorem ipsum dolor amet</h1>
+        <div class="parent">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <h1>Lorem ipsum dolor amet</h1>
+    </body>
+</html>

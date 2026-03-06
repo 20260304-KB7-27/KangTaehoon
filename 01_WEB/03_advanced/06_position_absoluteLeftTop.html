@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box {
+                width: 70px;
+                height: 70px;
+                position: absolute;
+            }
+            /* 
+            nth-child : 가상 클래스 선택자
+            - 특정 순서의 자식 요소를 선택
+             */
+
+            .box:nth-child(1) {
+                background-color: red;
+                left: 10px;
+                top: 10px;
+            }
+            .box:nth-child(2) {
+                background-color: green;
+                left: 40px;
+                top: 40px;
+            }
+            .box:nth-child(3) {
+                background-color: blue;
+                left: 70px;
+                top: 70px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Lorem ipsum dolor amet</h1>
+        <div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <h1>Lorem ipsum dolor amet</h1>
+    </body>
+</html>
