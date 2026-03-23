@@ -47,16 +47,17 @@
                     // 객체를 deep을 사용해서 감시할 경우 cur, prev 동일한 Proxy객체를 참조함.
 
                     watch(
-                        () => ({ ...user }), // 객체를 복사
+                        () => ({ ...user.value }), // 객체를 복사
                         (cur, prev) => {
                             console.log(
                                 `기존 사용자 : ${prev.age}, ${prev.email} -> 변경된 사용자 : ${cur.age}, ${cur.email}`,
                             );
                         },
+                        { deep: true },
                     );
 
                     // watch(
-                    //     user,
+                    //     ()=>({...user.value),
                     //     (cur, prev) => {
                     //         console.log(
                     //             `기존 사용자 : ${prev.age}, ${prev.email} -> 변경된 사용자 : ${cur.age}, ${cur.email}`,
