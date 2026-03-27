@@ -1,0 +1,37 @@
+<template>
+    <div>
+        <h1>v-model 테스트</h1>
+        <hr />
+        <!-- 하나의 컴포넌트에 v-model을 여러개 쓰고 싶을때 이름을 붙일 수 있다. -->
+        <BaseInput
+            v-model:modelValue="lastname"
+            label="성"
+            placeholder="성을 입력해주세요"
+        >
+        </BaseInput>
+        <BaseInput
+            v-model:modelValue="firstname"
+            label="이름"
+            placeholder="이름을 입력해주세요"
+        >
+        </BaseInput>
+        <p>
+            닉네임 : <strong>{{ modelValue }}</strong>
+        </p>
+        <p>
+            전체 이름 : <strong>{{ lastname }} {{ firstname }}</strong>
+        </p>
+    </div>
+</template>
+
+<script setup>
+import BaseInput from './components/BaseInput.vue';
+
+import { ref } from 'vue';
+// 입력 받을 반응형 데이터
+const modelValue = ref('');
+const firstname = ref('');
+const lastname = ref('');
+</script>
+
+<style scoped></style>
